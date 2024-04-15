@@ -1,7 +1,7 @@
-package com.android.moviesbymoviedb.repository.room_database
+package com.android.moviesbymoviedb.data
 
 import androidx.room.*
-import com.android.moviesbymoviedb.models.MovieModel
+import com.android.moviesbymoviedb.domain.models.MovieModel
 
 
 @Dao

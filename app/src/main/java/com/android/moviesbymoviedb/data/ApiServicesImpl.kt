@@ -1,12 +1,11 @@
-package com.android.moviesbymoviedb.repository
+package com.android.moviesbymoviedb.data
 
 import android.app.Application
 import android.content.Context
 import android.util.Log
-import com.android.moviesbymoviedb.sealeds.EventRepo
-import com.android.moviesbymoviedb.models.MovieModel
-import com.android.moviesbymoviedb.repository.room_database.MovieDatabase
-import com.android.moviesbymoviedb.utils.JsonParser
+import com.android.moviesbymoviedb.domain.sealeds.EventRepo
+import com.android.moviesbymoviedb.domain.models.MovieModel
+import com.android.moviesbymoviedb.domain.utils.JsonParser
 import dagger.hilt.android.qualifiers.ApplicationContext
 import io.ktor.http.*
 import kotlinx.coroutines.Dispatchers
@@ -46,7 +45,7 @@ class ApiServicesImpl @Inject constructor(
                 reqMethod = HttpMethod.Get,
                 parameterFormData = parameters,
                 failureCallback = { error ->
-                    emit(EventRepo.Error(error.apiError))
+                    emit(EventRepo.Error(error.apiErrorModel))
                 },
                 successCallback = {
                     var resultsArray = JSONArray()
@@ -62,10 +61,7 @@ class ApiServicesImpl @Inject constructor(
         }
 
     override suspend fun insertMoviesToLocalDatabase(movies: List<MovieModel>) {
-        Log.e("insertMoviesToLocalDatabase", movies.size.toString())
-        runBlocking(Dispatchers.IO) {
-            movieDatabase.movieDao().insertMovies(movies)
-        }
+        movieDatabase.movieDao().insertMovies(movies)
 
     }
 
@@ -73,19 +69,14 @@ class ApiServicesImpl @Inject constructor(
         flow {
 
             var movies = listOf<MovieModel>()
-            runBlocking(Dispatchers.IO) {
-                movies = movieDatabase.movieDao().getAllMovies()
-            }
-            Log.e("fetchMoviesFromLocalDatabase", movies.size.toString())
+            movies = movieDatabase.movieDao().getAllMovies()
 
             emit(EventRepo.Success(movies))
         }
 
     override suspend fun updateMovie(movie: MovieModel) {
-        Log.e("updateMovie", movie.toString())
-        runBlocking(Dispatchers.IO) {
-            movieDatabase.movieDao().updateMovie(movie)
-        }
+        movieDatabase.movieDao().updateMovie(movie)
+
     }
 
 }

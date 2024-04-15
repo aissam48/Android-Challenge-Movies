@@ -1,6 +1,6 @@
-package com.android.moviesbymoviedb.utils
+package com.android.moviesbymoviedb.domain.utils
 
-import com.android.moviesbymoviedb.models.MovieModel
+import com.android.moviesbymoviedb.domain.models.MovieModel
 import org.json.JSONArray
 
 object JsonParser {

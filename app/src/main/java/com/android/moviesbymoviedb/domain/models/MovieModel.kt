@@ -1,4 +1,4 @@
-package com.android.moviesbymoviedb.models
+package com.android.moviesbymoviedb.domain.models
 
 
 import androidx.room.Entity

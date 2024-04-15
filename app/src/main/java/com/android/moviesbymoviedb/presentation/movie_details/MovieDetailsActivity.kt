@@ -1,21 +1,18 @@
-package com.android.moviesbymoviedb.ui.movie_details
+package com.android.moviesbymoviedb.presentation.movie_details
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
-import androidx.lifecycle.lifecycleScope
 import com.android.moviesbymoviedb.R
 import com.android.moviesbymoviedb.databinding.ActivityMovieDetailsBinding
-import com.android.moviesbymoviedb.models.MovieModel
-import com.android.moviesbymoviedb.utils.goBackAnimation
-import com.android.moviesbymoviedb.utils.goForwardAnimation
-import com.android.moviesbymoviedb.utils.loadImageWithGlide
-import com.android.moviesbymoviedb.viewmodel.MoviesViewModel
+import com.android.moviesbymoviedb.domain.models.MovieModel
+import com.android.moviesbymoviedb.domain.utils.goBackAnimation
+import com.android.moviesbymoviedb.domain.utils.loadImageWithGlide
+import com.android.moviesbymoviedb.presentation.viewmodel.MoviesViewModel
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class MovieDetailsActivity : AppCompatActivity() {

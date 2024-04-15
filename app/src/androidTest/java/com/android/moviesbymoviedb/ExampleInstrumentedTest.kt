@@ -3,16 +3,15 @@ package com.android.moviesbymoviedb
 import androidx.recyclerview.widget.RecyclerView
 import androidx.test.espresso.Espresso
 import androidx.test.espresso.action.ViewActions
-import androidx.test.espresso.assertion.ViewAssertions
 import androidx.test.espresso.contrib.RecyclerViewActions
 import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.ext.junit.rules.ActivityScenarioRule
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import com.android.moviesbymoviedb.models.MovieModel
-import com.android.moviesbymoviedb.repository.room_database.MovieDao
-import com.android.moviesbymoviedb.repository.room_database.MovieDatabase
-import com.android.moviesbymoviedb.ui.movies.MoviesActivity
+import com.android.moviesbymoviedb.domain.models.MovieModel
+import com.android.moviesbymoviedb.data.MovieDao
+import com.android.moviesbymoviedb.data.MovieDatabase
+import com.android.moviesbymoviedb.presentation.movies.MoviesActivity
 import kotlinx.coroutines.runBlocking
 import org.junit.After
 

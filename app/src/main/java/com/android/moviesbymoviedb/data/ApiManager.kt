@@ -1,10 +1,10 @@
-package com.android.moviesbymoviedb.repository
+package com.android.moviesbymoviedb.data
 
 
 import android.content.Context
-import com.android.moviesbymoviedb.sealeds.EventRepo
+import com.android.moviesbymoviedb.domain.sealeds.EventRepo
 import com.android.moviesbymoviedb.R
-import com.android.moviesbymoviedb.models.APIError
+import com.android.moviesbymoviedb.domain.models.APIErrorModel
 import io.ktor.client.*
 import io.ktor.client.call.*
 import io.ktor.client.features.*
@@ -173,7 +173,7 @@ class ApiManager @Inject constructor(
             }
             failureCallback(
                 EventRepo.Error<Any>(
-                    apiError = APIError(e.response.status.value, errorMessage)
+                    apiErrorModel = APIErrorModel(e.response.status.value, errorMessage)
                 )
             )
 
@@ -181,7 +181,7 @@ class ApiManager @Inject constructor(
             // 5xx - Response
             failureCallback(
                 EventRepo.Error<Any>(
-                    apiError = APIError(
+                    apiErrorModel = APIErrorModel(
                         e.response.status.value,
                         appContext.getString(R.string.error_message_at_server),
                     )
@@ -190,7 +190,7 @@ class ApiManager @Inject constructor(
         } catch (e: Exception) {
             failureCallback(
                 EventRepo.Error<Any>(
-                    apiError = APIError(500, appContext.getString(R.string.error_message_at_server))
+                    apiErrorModel = APIErrorModel(500, appContext.getString(R.string.error_message_at_server))
                 )
             )
         }

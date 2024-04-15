@@ -1,12 +1,12 @@
-package com.android.moviesbymoviedb.viewmodel
+package com.android.moviesbymoviedb.presentation.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.android.moviesbymoviedb.sealeds.EventRepo
-import com.android.moviesbymoviedb.sealeds.EventUI
-import com.android.moviesbymoviedb.models.MovieModel
-import com.android.moviesbymoviedb.repository.ApiServicesImpl
-import com.android.moviesbymoviedb.utils.Constants
+import com.android.moviesbymoviedb.domain.sealeds.EventRepo
+import com.android.moviesbymoviedb.domain.sealeds.EventUI
+import com.android.moviesbymoviedb.domain.models.MovieModel
+import com.android.moviesbymoviedb.data.ApiServicesImpl
+import com.android.moviesbymoviedb.domain.utils.Constants
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -57,8 +57,8 @@ class MoviesViewModel @Inject constructor(
                     is EventRepo.Error -> {
                         _sharedFlowFetchMovies.emit(
                             EventUI.OnError(
-                                result.apiError.message,
-                                result.apiError.statusCode
+                                result.apiErrorModel.message,
+                                result.apiErrorModel.statusCode
                             )
                         )
                     }

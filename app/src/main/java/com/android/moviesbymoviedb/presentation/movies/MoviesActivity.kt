@@ -1,4 +1,4 @@
-package com.android.moviesbymoviedb.ui.movies
+package com.android.moviesbymoviedb.presentation.movies
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -10,12 +10,16 @@ import androidx.core.widget.doOnTextChanged
 import androidx.recyclerview.widget.RecyclerView
 import com.android.moviesbymoviedb.R
 import com.android.moviesbymoviedb.databinding.ActivityMoviesBinding
-import com.android.moviesbymoviedb.sealeds.EventUI
-import com.android.moviesbymoviedb.models.MovieModel
-import com.android.moviesbymoviedb.ui.favorites_movies.FavoritesActivity
-import com.android.moviesbymoviedb.ui.movie_details.MovieDetailsActivity
-import com.android.moviesbymoviedb.viewmodel.MoviesViewModel
-import com.android.moviesbymoviedb.utils.*
+import com.android.moviesbymoviedb.domain.sealeds.EventUI
+import com.android.moviesbymoviedb.domain.models.MovieModel
+import com.android.moviesbymoviedb.domain.utils.collectLatestLifecycleFlow
+import com.android.moviesbymoviedb.domain.utils.goForwardAnimation
+import com.android.moviesbymoviedb.domain.utils.gone
+import com.android.moviesbymoviedb.domain.utils.isInternetConnected
+import com.android.moviesbymoviedb.domain.utils.visible
+import com.android.moviesbymoviedb.presentation.favorites_movies.FavoritesActivity
+import com.android.moviesbymoviedb.presentation.movie_details.MovieDetailsActivity
+import com.android.moviesbymoviedb.presentation.viewmodel.MoviesViewModel
 import com.google.android.material.snackbar.Snackbar
 import com.google.gson.Gson
 import dagger.hilt.android.AndroidEntryPoint

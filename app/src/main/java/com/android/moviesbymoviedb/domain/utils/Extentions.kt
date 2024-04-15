@@ -1,16 +1,14 @@
-package com.android.moviesbymoviedb.utils
+package com.android.moviesbymoviedb.domain.utils
 
 import android.app.Activity
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
-import android.os.Build
 import android.view.View
 import android.widget.ImageView
 import androidx.activity.ComponentActivity
 import androidx.lifecycle.lifecycleScope
 import com.android.moviesbymoviedb.R
-import com.android.moviesbymoviedb.repository.BaseUrl
 import com.bumptech.glide.Glide
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.collectLatest

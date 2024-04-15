@@ -1,4 +1,4 @@
-package com.android.moviesbymoviedb.utils
+package com.android.moviesbymoviedb.domain.utils
 
 object Constants {
 

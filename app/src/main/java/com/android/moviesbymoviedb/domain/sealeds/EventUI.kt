@@ -1,4 +1,4 @@
-package com.android.moviesbymoviedb.sealeds
+package com.android.moviesbymoviedb.domain.sealeds
 
 sealed class EventUI<T>() {
     class OnLoading<T>(val isShowing: Boolean) : EventUI<T>()

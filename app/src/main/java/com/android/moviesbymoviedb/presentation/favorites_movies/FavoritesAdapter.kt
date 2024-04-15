@@ -1,4 +1,4 @@
-package com.android.moviesbymoviedb.ui.movies
+package com.android.moviesbymoviedb.presentation.favorites_movies
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -9,14 +9,14 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 
 import com.android.moviesbymoviedb.databinding.ItemMovieBinding
-import com.android.moviesbymoviedb.models.MovieModel
-import com.android.moviesbymoviedb.utils.loadImageWithGlide
+import com.android.moviesbymoviedb.domain.models.MovieModel
+import com.android.moviesbymoviedb.domain.utils.loadImageWithGlide
 
 
-class MoviesAdapter(
+class FavoritesAdapter(
     private val itemPressed: (item: MovieModel) -> Unit
 ) :
-    ListAdapter<MovieModel, MoviesAdapter.ViewHolder>(DiffUtilCallBacks()) {
+    ListAdapter<MovieModel, FavoritesAdapter.ViewHolder>(DiffUtilCallBacks()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding = ItemMovieBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -39,6 +39,7 @@ class MoviesAdapter(
 
         @SuppressLint("SetTextI18n")
         fun bind(myItem: MovieModel, position: Int) {
+
 
             binding.movieImage.loadImageWithGlide(myItem.posterPath)
 

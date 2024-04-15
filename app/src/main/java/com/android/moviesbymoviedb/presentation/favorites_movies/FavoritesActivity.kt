@@ -1,4 +1,4 @@
-package com.android.moviesbymoviedb.ui.favorites_movies
+package com.android.moviesbymoviedb.presentation.favorites_movies
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,16 +7,15 @@ import androidx.activity.viewModels
 import androidx.core.content.ContextCompat
 import com.android.moviesbymoviedb.R
 import com.android.moviesbymoviedb.databinding.ActivityFavoritesBinding
-import com.android.moviesbymoviedb.sealeds.EventUI
-import com.android.moviesbymoviedb.models.MovieModel
-import com.android.moviesbymoviedb.ui.movie_details.MovieDetailsActivity
-import com.android.moviesbymoviedb.utils.collectLatestLifecycleFlow
-import com.android.moviesbymoviedb.utils.goBackAnimation
-import com.android.moviesbymoviedb.utils.goForwardAnimation
-import com.android.moviesbymoviedb.viewmodel.MoviesViewModel
+import com.android.moviesbymoviedb.domain.sealeds.EventUI
+import com.android.moviesbymoviedb.domain.models.MovieModel
+import com.android.moviesbymoviedb.presentation.movie_details.MovieDetailsActivity
+import com.android.moviesbymoviedb.domain.utils.collectLatestLifecycleFlow
+import com.android.moviesbymoviedb.domain.utils.goBackAnimation
+import com.android.moviesbymoviedb.domain.utils.goForwardAnimation
+import com.android.moviesbymoviedb.presentation.viewmodel.MoviesViewModel
 import com.google.android.material.snackbar.Snackbar
 import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

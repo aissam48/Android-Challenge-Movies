@@ -1,7 +1,7 @@
-package com.android.moviesbymoviedb.repository
+package com.android.moviesbymoviedb.data
 
-import com.android.moviesbymoviedb.sealeds.EventRepo
-import com.android.moviesbymoviedb.models.MovieModel
+import com.android.moviesbymoviedb.domain.sealeds.EventRepo
+import com.android.moviesbymoviedb.domain.models.MovieModel
 import kotlinx.coroutines.flow.Flow
 
 interface ApiServices {
