@@ -10,7 +10,7 @@ import androidx.core.widget.doOnTextChanged
 import androidx.recyclerview.widget.RecyclerView
 import com.android.moviesbymoviedb.R
 import com.android.moviesbymoviedb.databinding.ActivityMoviesBinding
-import com.android.moviesbymoviedb.domain.sealeds.EventUI
+import com.android.moviesbymoviedb.presentation.viewmodel.sealed.EventUI
 import com.android.moviesbymoviedb.domain.models.MovieModel
 import com.android.moviesbymoviedb.domain.utils.collectLatestLifecycleFlow
 import com.android.moviesbymoviedb.domain.utils.goForwardAnimation

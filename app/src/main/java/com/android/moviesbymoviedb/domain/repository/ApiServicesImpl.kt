@@ -1,17 +1,18 @@
-package com.android.moviesbymoviedb.data
+package com.android.moviesbymoviedb.domain.repository
 
 import android.app.Application
 import android.content.Context
-import android.util.Log
-import com.android.moviesbymoviedb.domain.sealeds.EventRepo
+import com.android.moviesbymoviedb.data.local.MovieDatabase
+import com.android.moviesbymoviedb.data.remote.ApiManager
+import com.android.moviesbymoviedb.data.remote.ApiServices
+import com.android.moviesbymoviedb.data.remote.BaseUrl
+import com.android.moviesbymoviedb.domain.repository.sealed.EventRepo
 import com.android.moviesbymoviedb.domain.models.MovieModel
 import com.android.moviesbymoviedb.domain.utils.JsonParser
 import dagger.hilt.android.qualifiers.ApplicationContext
 import io.ktor.http.*
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
-import kotlinx.coroutines.runBlocking
 import org.json.JSONArray
 import javax.inject.Inject
 import kotlin.collections.HashMap

@@ -1,6 +1,6 @@
-package com.android.moviesbymoviedb.data
+package com.android.moviesbymoviedb.data.remote
 
-import com.android.moviesbymoviedb.domain.sealeds.EventRepo
+import com.android.moviesbymoviedb.domain.repository.sealed.EventRepo
 import com.android.moviesbymoviedb.domain.models.MovieModel
 import kotlinx.coroutines.flow.Flow
 

@@ -9,8 +9,8 @@ import androidx.test.ext.junit.rules.ActivityScenarioRule
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.android.moviesbymoviedb.domain.models.MovieModel
-import com.android.moviesbymoviedb.data.MovieDao
-import com.android.moviesbymoviedb.data.MovieDatabase
+import com.android.moviesbymoviedb.data.local.MovieDao
+import com.android.moviesbymoviedb.data.local.MovieDatabase
 import com.android.moviesbymoviedb.presentation.movies.MoviesActivity
 import kotlinx.coroutines.runBlocking
 import org.junit.After

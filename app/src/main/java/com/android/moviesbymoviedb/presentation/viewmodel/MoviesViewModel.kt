@@ -2,10 +2,10 @@ package com.android.moviesbymoviedb.presentation.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.android.moviesbymoviedb.domain.sealeds.EventRepo
-import com.android.moviesbymoviedb.domain.sealeds.EventUI
+import com.android.moviesbymoviedb.domain.repository.sealed.EventRepo
+import com.android.moviesbymoviedb.presentation.viewmodel.sealed.EventUI
 import com.android.moviesbymoviedb.domain.models.MovieModel
-import com.android.moviesbymoviedb.data.ApiServicesImpl
+import com.android.moviesbymoviedb.domain.repository.ApiServicesImpl
 import com.android.moviesbymoviedb.domain.utils.Constants
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken

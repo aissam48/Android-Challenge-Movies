@@ -2,8 +2,8 @@ package com.android.moviesbymoviedb.di
 
 import android.content.Context
 import androidx.room.Room
-import com.android.moviesbymoviedb.data.ApiManager
-import com.android.moviesbymoviedb.data.MovieDatabase
+import com.android.moviesbymoviedb.data.remote.ApiManager
+import com.android.moviesbymoviedb.data.local.MovieDatabase
 
 import dagger.Module
 import dagger.Provides

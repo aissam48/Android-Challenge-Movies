@@ -7,7 +7,7 @@ import androidx.activity.viewModels
 import androidx.core.content.ContextCompat
 import com.android.moviesbymoviedb.R
 import com.android.moviesbymoviedb.databinding.ActivityFavoritesBinding
-import com.android.moviesbymoviedb.domain.sealeds.EventUI
+import com.android.moviesbymoviedb.presentation.viewmodel.sealed.EventUI
 import com.android.moviesbymoviedb.domain.models.MovieModel
 import com.android.moviesbymoviedb.presentation.movie_details.MovieDetailsActivity
 import com.android.moviesbymoviedb.domain.utils.collectLatestLifecycleFlow

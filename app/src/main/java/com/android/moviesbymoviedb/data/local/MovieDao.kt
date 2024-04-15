@@ -1,4 +1,4 @@
-package com.android.moviesbymoviedb.data
+package com.android.moviesbymoviedb.data.local
 
 import androidx.room.*
 import com.android.moviesbymoviedb.domain.models.MovieModel

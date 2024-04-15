@@ -1,4 +1,4 @@
-package com.android.moviesbymoviedb.domain.sealeds
+package com.android.moviesbymoviedb.domain.repository.sealed
 
 import com.android.moviesbymoviedb.domain.models.APIErrorModel
 
